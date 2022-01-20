@@ -1,6 +1,0 @@
-{
-    "compilerOptions": {
-        "noImplicitAny": false,
-    },
-    "include": ["script/**/*"],
-  }
