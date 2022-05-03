@@ -64,7 +64,7 @@ export const AboveTheFold = () => {
       <h2>Get Started With Lingua Franca</h2>
       <Row>
         <Col className="call-to-action hide-small">
-          <img src={require("../../../../../img/Lingua_Franca.png").default} width="100%"  />
+          <img src={require("./img/Lingua_Franca.png").default} width="100%"  />
           <FluidButton
             title={i("index_2_cta_download")}
             subtitle={i("index_2_cta_download_subtitle")}

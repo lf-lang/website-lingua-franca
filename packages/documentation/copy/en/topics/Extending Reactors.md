@@ -101,7 +101,7 @@ reactor B extends A {
 
 $end(Extends)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Extends.svg" width="350"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Extends.svg" width="350"/>
 
 Here, the base class `A` has a single output that it writes to in reaction to an input. The subclass inherits the input, the output, and the reaction of `A`, and adds its own input `b` and reaction. When an input event `a` arrives, both reactions will be invoked, but, once again, in a well-defined order. The reactions of the base class are invoked before those of the derived class. So in this case, `B` will overwrite the output produced by `A`.
 

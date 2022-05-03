@@ -131,7 +131,13 @@ const generateHTML = async (lang: string) => {
 
   // prettier-ignore
   // const style = readFileSync(join(__dirname, "..", "assets", "ebook-style.css"), "utf8");
-  html += `<head><style type='text/css'>${css}</style></head>`;
+  html += `<head>
+  
+  <style type='text/css'>
+  ${css}
+  </style>
+  <base href="${__dirname}/../../..">
+  </head>`;
 
   html += "<body><div id='handbook-content'>";
 
@@ -146,7 +152,7 @@ const generateHTML = async (lang: string) => {
   html += `
   <div id="pdf-intro">
   <center style="page-break-after: always">
-    <img src="./Lingua_Franca.png" width=200>
+    <img src="./img/Lingua_Franca.png" width=200>
     <p style='width: 340px;'>This copy of the Lingua Franca handbook for the ${lang} target was created on ${date} against
     commit
     <a href="https://github.com/lf-lang/website-lingua-franca/tree/${sha}"><code>${sha}</code></a>.

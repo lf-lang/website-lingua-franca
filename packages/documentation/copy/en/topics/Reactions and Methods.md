@@ -311,7 +311,7 @@ main reactor {
 
 $end(Contained)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Contained.svg" width="300"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Contained.svg" width="300"/>
 
 This instantiates the above `Overwriting` reactor and monitors its outputs.
 

@@ -121,7 +121,7 @@ reactor Schedule {
 
 $end(Schedule)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Schedule.svg" width="200"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Schedule.svg" width="200"/>
 
 Here, the delay is specified in the call to schedule within the target language code. Notice that in the diagram, a logical action is shown as a triangle with an **L**. Logical actions are always scheduled within a reaction of the reactor that declares the action.
 
@@ -268,11 +268,11 @@ reactor Physical {
 
 $end(Physical)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Physical.svg" width="200"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Physical.svg" width="200"/>
 
 If you drive this with a timer, using for example the following structure:
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/PhysicalTest.svg" width="400"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/PhysicalTest.svg" width="400"/>
 
 then running the program will yield an output something like this:
 
@@ -422,7 +422,7 @@ main reactor {
 
 $end(Asynchronous)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Asynchronous.svg" width="350"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Asynchronous.svg" width="350"/>
 
 Physical actions are the mechanism for obtaining input from the outside world. Because they are assigned a logical time derived from the physical clock, their logical time can be interpreted as a measure of the time at which some external event occurred.
 

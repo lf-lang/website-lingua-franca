@@ -31,7 +31,7 @@ This part briefly describes the background of the project and explains how to ge
 
 - [Complete video of part I](https://youtu.be/7vkhX5tS_oI)
 - Individual parts of the video:
-  <!--img style="float: right;" src="../../../../../img/tutorial/vm.png" width=50%-->
+  <!--img style="float: right;" src="./img/tutorial/vm.png" width=50%-->
 
   | Contents                                                                                                                                     |
   | -------------------------------------------------------------------------------------------------------------------------------------------- |

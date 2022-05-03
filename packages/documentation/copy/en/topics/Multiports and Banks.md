@@ -181,7 +181,7 @@ main reactor {
 
 $end(Multiport)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Multiport.svg" width="300"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Multiport.svg" width="300"/>
 
 Executing this program will yield:
 
@@ -259,7 +259,7 @@ main reactor {
 }
 ```
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/BankToBankMultiport.svg" width="300"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/BankToBankMultiport.svg" width="300"/>
 
 If the `Source` and `Destination` reactors have multiport inputs and outputs, as in the examples above, then a warning will be issued if the total width on the left does not match the total width on the right. For example, the following is balanced:
 
@@ -543,7 +543,7 @@ main reactor {
 
 $end(ChildBank)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/ChildBank.svg" width="150"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/ChildBank.svg" width="150"/>
 
 In this program, the `Parent` reactor contains a bank of `Child` reactor instances
 with a width of 2. In the main reactor, a bank of `Parent` reactors is
@@ -806,7 +806,7 @@ WARNING: No source file found: ../code/rs/src/ChildParentBank2.lf
 
 $end(ChildParentBank2)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/ChildParentBank2.svg" width="250"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/ChildParentBank2.svg" width="250"/>
 
 Running this program will give something like the following:
 
@@ -993,7 +993,7 @@ main reactor MultiportToBank {
 
 $end(MultiportToBank)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/MultiportToBank.svg" width="300"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/MultiportToBank.svg" width="300"/>
 
 The three outputs from the `Source` instance `a` will be sent, respectively, to each of three instances of `Destination`, `b[0]`, `b[1]`, and `b[2]`. The result of the program will be something like the following:
 
@@ -1087,7 +1087,7 @@ reactor Node(
     reaction (in) {=
         for (auto i = 0ul; i < in.size(); i++) {
             if (in[i].is_present()) {
-                std::cout << "Bank index " << bank_index 
+                std::cout << "Bank index " << bank_index
                     << " received " << *in[i].get() << " on channel" << std::endl;
             }
         }
@@ -1161,7 +1161,7 @@ WARNING: No source file found: ../code/rs/src/Interleaved.lf
 
 $end(Interleaved)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Interleaved.svg" width="250"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Interleaved.svg" width="250"/>
 
 In the above program, four instance of `Node` are created, and, at startup, each instance sends 42 to its second (index 1) output channel. The result is that the second bank member (`bank_index` 1) will receive the number 42 on each input channel of its multiport input. Running this program gives something like the following:
 
@@ -1180,10 +1180,10 @@ In bank index 1, the 0-th channel receives from `bank_index` 0, the 1-th channel
 
 This style of connection is accomplished using the new keyword $interleaved$ in the connection. Normally, a port reference such as `nodes.out` where `nodes` is a bank and `out` is a multiport, would list all the individual ports by first iterating over the banks and then, for each bank index, iterating over the ports. If we consider the tuple (b,p) to denote the index b within the bank and the index p within the multiport, then the following list is created: (0,0), (0,1), (0,2), (0,3), (1,0), (1,1), (1,2), (1,3), (2,0), (2,1), (2,2), (2,3), (3,0), (3,1), (3,2), (3,3). However, if we use $interleaved$`(nodes.out)` instead, the connection logic will iterate over the ports first and then the banks, creating the following list: (0,0), (1,0), (2,0), (3,0), (0,1), (1,1), (2,1), (3,1), (0,2), (1,2), (2,2), (3,2), (0,3), (1,3), (2,3), (3,3). By combining a normal port reference with a interleaved reference, we can construct a fully connected network. The figure below visualizes this how this pattern would look without banks or multiports:
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/AddressableDesugared.png" width="600"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/AddressableDesugared.png" width="600"/>
 
 If we were to use a normal connection `nodes.out -> nodes.in;` instead of the $interleaved$ connection, then the following pattern would be created:
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/AddressableNaiveDesugared.png" width="600"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/AddressableNaiveDesugared.png" width="600"/>
 
 Effectively, this connects each reactor instance to itself, which isn't very useful.

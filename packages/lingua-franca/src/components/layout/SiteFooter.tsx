@@ -108,7 +108,7 @@ export const SiteFooter = (props: Props) => {
               id="lf-logo"
               width={195}
               height={75}
-              src={require("../../../../../img/footer_logo.svg").default}
+              src={require("./img/footer_logo.svg").default}
               alt="Lingua Franca Logo"
             />
           </a>

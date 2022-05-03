@@ -104,7 +104,7 @@ main reactor {
 
 $end(Microsteps)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Microsteps.svg" width="150"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Microsteps.svg" width="150"/>
 
 Executing this program will yield something like this:
 
@@ -281,7 +281,7 @@ main reactor {
 
 $end(Simultaneous)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Simultaneous.svg" width="400"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Simultaneous.svg" width="400"/>
 
 The `Destination` reactor has two inputs, `x` and `y`, and it reports in a reaction to either input what is the logical time, the microstep, and which input is present. The main reactor reacts to $startup$ by sending data to the `x` input of `Destination`. It then schedules a `repeat` action with an `<offset>` of zero. The `repeat` reaction is invoked **strictly later**, one **microstep** later. The output printed, therefore, will look like this:
 

@@ -138,7 +138,7 @@ The first line defines each of the columns. For example, the second line records
 
 The `trace_to_csv` utility will also create a summary file called `ThreadedThreaded_summary.csv` that looks like this after importing in Excel:
 
-![CSV summary file](../../../../../img/tracing/ChromeTracingInC3.png)
+![CSV summary file](./img/tracing/ChromeTracingInC3.png)
 
 If you call
 
@@ -148,7 +148,7 @@ If you call
 
 then a ThreadedThreaded.json file is created. To visualize the data, point your Chrome browser to `chrome://tracing/`. Click on the `Load` button and select the `.json` file that you just created. The result should look something like this:
 
-![Chrome tracing visualization](../../../../../img/tracing/ChromeTracingInC.png)
+![Chrome tracing visualization](./img/tracing/ChromeTracingInC.png)
 
 The tan-colored regions whose labels start with "A" and "W" represent time spent advancing logical time and waiting for activity on the reaction queue, respectively. When logical time advances, unless you have specified the `-fast` option, one of the worker threads blocks execution until physical time catches up with logical time. The remaining worker threads block waiting for reactions that are ready to execute appear on the reaction queue.
 
@@ -191,7 +191,7 @@ You can also pass a value to the trace. The type of the value is `long long`, so
 
 An example of a Chrome display of a run of the [Tracing regression test](https://github.com/lf-lang/lingua-franca/blob/master/test/C/src/concurrent/Tracing.lf) is here:
 
-![Chrome tracing visualization](../../../../../img/tracing/ChromeTracingInC2.png)
+![Chrome tracing visualization](./img/tracing/ChromeTracingInC2.png)
 
 In this image, "Number of Destination invocations" is an event description to
 which values 1 through 10 were passed. This results in the shaded value plot

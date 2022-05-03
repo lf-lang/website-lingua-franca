@@ -18,7 +18,7 @@ To install this extension from the marketplace, launch VS Code Quick Open (<kbd>
 ## Using the Visual Studio Code Extension
 
 - Show the diagram for the currently active Lingua Franca file by clicking on the diagrams icon at the upper right:
-  <img src="../../../../../img/vs_code/diagrams_icon.png" class="icon">
+  <img src="./img/vs_code/diagrams_icon.png" class="icon">
 - Compile the `.lf` file by entering <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, then `Lingua Franca: Build`.
 - Run the `.lf` file by entering <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, then `Lingua Franca: Build and Run`.
 - (Optional) Users who edit LF programs with a Python target will benefit the most from Python

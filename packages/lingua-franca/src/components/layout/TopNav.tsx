@@ -81,7 +81,7 @@ export const SiteNav = (props: Props) => {
 
           <IntlLink id="home-page-logo" to="/" aria-label="TypeScript Home Page">
             
-          <img id="lf-logo" width={135} height={48} src={require("../../../../../img/header_logo.svg").default} alt="Lingua Franca Logo"/>
+          <img id="lf-logo" width={135} height={48} src={require("./img/header_logo.svg").default} alt="Lingua Franca Logo"/>
           </IntlLink>
 
           <nav role="navigation">

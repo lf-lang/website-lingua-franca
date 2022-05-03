@@ -20,11 +20,11 @@ Possible concept for supporting modes in LF.
 
 ### Synthetic Examples
 
-![](../../../../../img/modal_models_rfc/motor.png)
+![](./img/modal_models_rfc/motor.png)
 
 Separating reaction 2 and 3 of the Controller reactor into mutually exclusive modes could allow to ensure via static verification that at no time the Motor reactor receives a `fwd` and `rev` input simultaneously.
 
-![](../../../../../img/modal_models_rfc/cyclic_dep.png)
+![](./img/modal_models_rfc/cyclic_dep.png)
 
 Separating reaction 2 and 3 of the Modes reactor into mutually exclusive modes could allow to accept this program.
 
@@ -73,15 +73,15 @@ reaction(trig) transition Two {=
 
 ### Graphical Syntax
 
-![](../../../../../img/modal_models_rfc/sine_avg_max_modes.png)
+![](./img/modal_models_rfc/sine_avg_max_modes.png)
 
 The example continuously collects 10 data samples of a sine wave and computes either the average or maximum. [LF source code](https://github.com/lf-lang/lingua-franca/blob/master/experimental/modal_models/SineAvgMax/sine_max_avg.lf). It is based on this [Ptolemy model with modes](http://ptolemy.org/systems/models/modal/ModalSDF/index.html).
 
-![](../../../../../img/modal_models_rfc/sine_avg_max_pt2.png)
+![](./img/modal_models_rfc/sine_avg_max_pt2.png)
 
 Note that reactions 1 and 3 are identical and both collect a sequence into an array. This was done to mimic the structure in Ptolemy. An alternative design could separate this task into a single reaction outside the modes (following image, [source code](https://github.com/lf-lang/lingua-franca/blob/master/experimental/modal_models/SineAvgMax/sine_max_avg_v2.lf)) or into a reactor either instantiated in each mode or preprocessing inputs for the ModalModel reactor.
 
-![](../../../../../img/modal_models_rfc/sine_avg_max_v2_modes.png)
+![](./img/modal_models_rfc/sine_avg_max_v2_modes.png)
 
 ## Possible Execution Model
 

@@ -178,7 +178,7 @@ WARNING: No source file found: ../code/rs/src/DeadlineTest.lf
 
 $end(DeadlineTest)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/DeadlineTest.svg" width="500"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/DeadlineTest.svg" width="500"/>
 
 Running this program will result in the following output:
 

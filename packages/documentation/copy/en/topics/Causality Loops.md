@@ -154,7 +154,7 @@ $end(Cycle)$
 
 This program yields the following diagram:
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Cycle.svg" width="400"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Cycle.svg" width="400"/>
 
 The diagram highlights a **causality loop** in the program. At each tag, in reactor `B`, the first reaction has to execute before the second if it is enabled, a precedence indicated with the red dashed arrow. But the first can't execute until the reaction of `A` has executed, and that reaction cannot execute until the second reaction `B` has executed. There is no way to satisfy these requirements, so the tools refuse to generated code.
 
@@ -303,7 +303,7 @@ main reactor {
 
 $end(CycleWithDelay)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/CycleWithDelay.svg" width="400"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/CycleWithDelay.svg" width="400"/>
 
 Here, we have used a delay of 0, which results in a delay of one [microstep](/docs/handbook/superdense-time). We could equally well have specified a positive time value.
 
@@ -452,6 +452,6 @@ main reactor {
 
 $end(CycleReordered)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/CycleReordered.svg" width="400"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/CycleReordered.svg" width="400"/>
 
 There is no longer any causality loop.

@@ -114,7 +114,7 @@ $end(RegressionTest)$
 
 As soon as programs consist of more than one reactor, it becomes particularly useful to reference the diagrams that are automatically created and displayed by the Lingua Franca IDEs. The diagram for the above program is as follows:
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/RegressionTest.svg" width="500"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/RegressionTest.svg" width="500"/>
 
 In this diagram, the timer is represented by a clock-like icon, the reactions by chevron shapes, and the $shutdown$ event by a diamond. If there were a $startup$ event in this program, it would appear as a circle.
 
@@ -196,7 +196,7 @@ main reactor {
 
 </div>
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Multicast.svg" width="250"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Multicast.svg" width="250"/>
 
 Lingua Franca provides a convenient shortcut for such multicast connections, where the above two lines can be replaced by one as follows:
 
@@ -330,7 +330,7 @@ main reactor Hierarchy {
 
 $end(Hierarchy)$
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/Hierarchy.svg" width="500"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/Hierarchy.svg" width="500"/>
 
 The `Container` has a parameter named `stride`, whose value is passed to the `factor` parameter of the `Scale` reactor. The line
 
@@ -370,6 +370,6 @@ main reactor {
 
 This is rendered in by the diagram synthesizer as follows:
 
-<img alt="Lingua Franca diagram" src="../../../../../img/diagrams/PhysicalConnection.svg" width="200"/>
+<img alt="Lingua Franca diagram" src="./img/diagrams/PhysicalConnection.svg" width="200"/>
 
 In such a connection, the logical time at the recipient is derived from the local physical clock rather than being equal to the logical time at the sender. The physical time will always exceed the logical time of the sender (unless fast is set to `true`), so this type of connection incurs a nondeterministic positive logical time delay. Physical connections are useful sometimes in [Distributed-Execution](/docs/handbook/distributed-execution) in situations where the nondeterministic logical delay is tolerable. Such connections are more efficient because timestamps need not be transmitted and messages do not need to flow through through a centralized coordinator (if a centralized coordinator is being used).
