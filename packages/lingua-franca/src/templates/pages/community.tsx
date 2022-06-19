@@ -21,7 +21,7 @@ const contributors = [
     image: "https://avatars.githubusercontent.com/u/4221770?v=4",
     country: "🇺🇸",
     continentish: "North America",
-    blurb: "Postdocural researcher at UC Berkeley."
+    blurb: "Postdoctoral researcher at UC Berkeley."
   },
   {
     name: "Peter Donovan",
