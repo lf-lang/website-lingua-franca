@@ -23,7 +23,7 @@ export const SiteNav = (props: Props) => {
       <div id="top-menu" className="up">
         <div className="left below-small">
 
-          <IntlLink id="home-page-logo" to="/" aria-label="TypeScript Home Page">
+          <IntlLink id="home-page-logo" to="/" aria-label="Lingua Franca Home Page">
             
           <img id="lf-logo" width={135} height={48} src={require("../../../../../img/header_logo.svg").default} alt="Lingua Franca Logo"/>
           </IntlLink>
