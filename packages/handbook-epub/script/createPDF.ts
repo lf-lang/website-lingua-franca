@@ -208,7 +208,7 @@ const addHandbookPage = async (id: string, index: number) => {
 
   const html = await getHTML(md.content, {});
   const edited = replaceAllInString(html, {
-    'a href="/': 'a href="https://www.typescriptlang.org/',
+    'a href="/': 'a href="https://www.lf-lang.org/',
   });
 
   const content = prefix + edited + suffix;

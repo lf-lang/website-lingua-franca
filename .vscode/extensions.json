@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "esbenp.prettier-vscode",
-    "Orta.vscode-twoslash"
+    "esbenp.prettier-vscode"
   ]
 }

@@ -22,8 +22,6 @@ const getFilePaths = folderPath => {
 const allFiles = getFilePaths(join(__dirname, "..", "copy", "en"));
 const enRoot = join(__dirname, "..", "copy", "en");
 
-// From:   '/Users/ortatherox/dev/typescript/new-website/packages/documentation/copy/en/Advanced Types.md',
-// To:     'Advanced Types.md',
 const files = allFiles.map((f) => f.replace(enRoot + "/", ""));
 
 const code = `

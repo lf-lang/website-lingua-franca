@@ -86,9 +86,7 @@ export const AboveTheFold = () => {
       <h2>Get Started<br />With Lingua Franca</h2>
       <Row>
         <Col className="call-to-action flex-column">
-          <div className="handbook-preview">
-            <img src={require("../../assets/index/handbook.jpg").default} width={"100%"} />
-          </div>
+          <img src={require("../../../../../img/Lingua_Franca.png").default} width="100%"  />
           <div className="inline-buttons">
             <a className='flat-button' href="/docs/handbook/intro.html">Web</a>
             <a className='flat-button' href="/assets/lingua-franca-handbook.epub">Epub</a>
