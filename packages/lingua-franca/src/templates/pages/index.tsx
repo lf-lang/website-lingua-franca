@@ -29,25 +29,6 @@ const Index: React.FC<Props> = (props) => {
   const i = createInternational<typeof indexCopy>(useIntl())
   const Link = createIntlLink(props.pageContext.lang)
 
-
-  // useEffect(() => {
-  //   // NOOP on tiny devices where we need to re-orient the arrows.
-  //   if (window.innerWidth < 900) return
-
-  //   const adopt = document.getElementById("adopt-gradually-content")!
-  //   adopt.classList.remove("no-js")
-  //   adopt.classList.add("fancy-scroll")   
-
-  //   updateOnScroll(i)()
-  //   // Handles setting the scroll 
-  //   window.addEventListener("scroll", updateOnScroll(i), { passive: true, capture: true });
- 
-
-  //   return () => {
-  //     window.removeEventListener("scroll", updateOnScroll(i))
-  //   }
-  // });
-
   /** Basically a <p> with bold set up */
   const P = (props: { ikey: keyof typeof indexCopy }) =>  <p key={props.ikey}>{i(props.ikey, { strong: (...chunk) => <strong>{chunk}</strong> })}</p>
   const GetStarted = (props: { href: string, title: any, subtitle: any, classes: string }) => (
@@ -102,110 +83,6 @@ const Index: React.FC<Props> = (props) => {
                 </Col>
             </Row>
         </Section>
-        
-        {/* {<div id="get-started" className="animate">
-          <Section color="white">
-              <Half>
-               <div id='adopt-gradually-content' className='no-js'>
-                   <h2 id='adopt-gradually'>{i("index_2_adopt")}</h2>
-                    <div id='adopt-step-slider'>
-                    <p id='adopt-step-blurb'></p>
-                    <Row>
-                        {<Col key='handbook'>
-                            <P ikey="index_2_adopt_blurb_1" />
-                        </Col> }
-                    </Row>
-                    <Row>
-                      <Col key='main'>
-                          <Adopt.StepOne i={i} />
-                          <Adopt.StepTwo i={i} />
-                          <Adopt.StepThree i={i} />
-                          <Adopt.StepFour i={i} />
-                          <Adopt.StepperAll />
-                      </Col>
-                    </Row>
-                  </div>
-              </div>
-            </Half>
-          </Section>
-        </div>} */}
-
-        {/* <Section color="light-grey">
-            <Row>
-                <Col key='title'>
-                    <h3 id='describe-your-data'>{i("index_2_describe")}</h3>
-                    <P ikey="index_2_describe_blurb1" />
-                    <P ikey="index_2_describe_blurb2" />
-                </Col>
-                <Col key='ex1'>
-                  <Grad1 />
-                </Col>
-                <Col key='ex2'>
-                  <Grad2 />
-                </Col>
-            </Row>
-        </Section>  */}
-
-
-        {/* <Section color="white" className="via-delete">
-            <h2 id='via-delete-key'>{i("index_2_transform")}</h2>
-            <Row>
-                <Col key='title'>
-                  <Del1 />
-                  <P ikey="index_2_transform_1"/>
-                </Col>
-
-                <Col key='ex1'>
-                    <Del2 />
-                    <P ikey="index_2_transform_2"/>
-                </Col>
-
-                <Col key='ex2'>
-                  <Del3 />
-                  <P ikey="index_2_transform_3"/>
-                </Col>
-            </Row>
-        </Section> */}
-
-        {/* <Section color="light-grey" className="migrations">
-          <h2 id='migration_title'>{i("index_2_migration_title")}</h2>
-          <div className="github-bar left">
-            <GitHubBar left />
-          </div>
-          <div className="github-bar right">
-            <GitHubBar left={false} />
-          </div>
-          <MigrationStories />
-        </Section> */}
-
-        {/* <Section color="dark-green" className="show-only-small">
-          <h3>{i("index_2_migration_oss")}</h3>
-          <OSS />
-        </Section> */}
-
-        {/* <Section color="white">
-          <h2>{i("index_2_loved_by")} </h2>
-          <Row>
-            <Col key='TS improves JS'>
-                <img src={withPrefix("/images/index/stack-overflow.svg")} alt="Image of the stack overflow logo, and a graph showing TypeScript as the 2nd most popular language" />
-                <div style={{ width: "60%", marginTop: "20px" }}>
-                  <p>{i("index_2_loved_stack", { strong: (...chunk) => <strong>{chunk}</strong>, so: (...chunk) => <a href="https://insights.stackoverflow.com/survey/2020#most-loved-dreaded-and-wanted" target="_blank">{chunk}</a> })}</p>
-                </div>
-            </Col>
-            <div style={{ backgroundColor: "black", width: "1px" }} />
-            <Col key='you'>
-              <Row>
-                <div style={{  width: "160px", textAlign: "center" }}>
-                  <img src={withPrefix("/images/index/state-of-js.svg")} alt="Logo of the State of JS survey"/>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <p>{i("index_2_loved_state_js", { strong: (...chunk) => <strong>{chunk}</strong>, js: (...chunk) => <a href="https://2020.stateofjs.com/en-US/technologies/javascript-flavors/" target="_blank">{chunk}</a>  })}</p>
-                  <p>{i("index_2_loved_state_js2", { strong: (...chunk) => <strong>{chunk}</strong> })}</p>
-                </div>
-              </Row>
-            </Col>
-          </Row>
-        </Section> */}
 
       </div>
 

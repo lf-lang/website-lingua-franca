@@ -1,8 +1,6 @@
 import * as React from "react"
 import { Intl } from "../../components/Intl"
-import { createIntlLink } from "../../components/IntlLink"
 import { Layout } from "../../components/layout"
-import { QuickJump } from "../../components/QuickJump"
 
 type Props = {
   pageContext: any
@@ -10,7 +8,6 @@ type Props = {
 }
 
 const Index: React.FC<Props> = (props) => {
-  const Link = createIntlLink(props.pageContext.lang)
 
   return <Layout title="How to set up Lingua Franca" description="Use Lingua Franca" lang={props.pageContext.lang}>
     <div className="raised main-content-block">

@@ -1,4 +1,3 @@
-import { SelectHTMLAttributes } from "react";
 import { hasLocalStorage } from "./hasLocalStorage";
 import { setTargetLanguage } from "./setTargetLanguage";
 

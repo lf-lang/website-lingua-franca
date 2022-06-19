@@ -4,7 +4,6 @@ import { SiteFooter } from "./layout/SiteFooter"
 import { SeoProps, HeadSEO } from "./HeadSEO";
 import "./layout/main.scss"
 import { Helmet } from "react-helmet";
-import { LanguageRecommendations } from "./layout/LanguageRecommendation";
 import { withPrefix } from "gatsby";
 
 type LayoutProps = SeoProps & Props & {
@@ -31,7 +30,6 @@ pre data-err {
         <SiteNav {...props} />
         <main role="main">{props.children}</main>
         <SiteFooter {...props} />
-        <LanguageRecommendations {...props} />
       </div>
     </>
   )

@@ -4,6 +4,4 @@ export const docCopy = {
     "Find Lingua Franca starter projects: from Python to C to C++ to TypeScript.",
   doc_headline: "Learning Resources",
   doc_headline_handbook_blurb: "The Lingua Franca language reference",
-  doc_learn_handbook_blurb: "The Lingua Franca language reference", // TODO: Remove, unused
- 
 }
