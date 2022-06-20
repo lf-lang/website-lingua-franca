@@ -2,25 +2,27 @@
 @import "./fonts.scss";
 
 .dark-theme {
-  --lf-keyword: #{$lf-keyword-on-dark};
-  --lf-target-selector: #{$lf-target-selector-on-dark};
+  --lf-keyword: #{$lf-gold-dark};
+  --lf-target-selector: #{$lf-gold-dark};
   --background-color: #{$ts-dark-bg-color};
   --text-color: #fff;
   --border-color: #444;
   --background-minor-highlight-color: #343434;
   --inline-code-background-color: #{$ts-dark-bg-color};
   --inline-code-color: #fff;
-  --link-color: #{$ts-main-blue-lightest-color};
+  --link-color: #{$lf-main-blue-lightest-color};
   --pure-background: black;
   --raised-background-color: #{$ts-dark-bg-for-foreground-color};
   --alt-text-color: #fff;
   --raised-box-shadow: 0 1.6px 3.6px 0 rgba(255, 255, 255, 0.132),
     0 0.3px 0.9px 0 rgba(255, 255, 255, 0.108);
-  --sidebar-background-color: #{$ts-dark-bg-secondary};
+  --sidebar-background-color: #{$ts-dark-bg-for-foreground-color};
   --sidebar-list-active-background-color: #{$ts-dark-barely-blue-highlight};
   --sidebar-list-background-color: rgb(53, 52, 52);
   --sidebar-link-border-color: #fff;
   --sidebar-item-border-color: #3e3e3e;
+  --sidebar-twisty-color: #{$lf-gold-dark};
+  --sidebar-highlight-color: #{$lf-gold-dark};
   --sidebar-active-button-background-color: #{$ts-bg-selection-grey};
   --table-border-color: #545454;
   --blue-tinged-bg: #2c3841;
@@ -36,8 +38,8 @@
 html,
 html.light-theme {
   // light theme
-  --lf-keyword: #{$lf-keyword-on-light};
-  --lf-target-selector: #{$lf-target-selector-on-light};
+  --lf-keyword: #{$lf-gold-dark};
+  --lf-target-selector: #{$lf-gold-light};
   --background-color: #{$ts-light-bg-sandy-color};
   --pure-background: white;
   --text-color: #333;
@@ -45,7 +47,7 @@ html.light-theme {
   --background-minor-highlight-color: #fcfcfc;
   --inline-code-background-color: #f5f2f0;
   --inline-code-color: #000;
-  --link-color: #{$ts-main-blue-darker-color};
+  --link-color: #{$lf-main-blue-color};
   --raised-background-color: #fff;
   --alt-text-color: #000;
   --raised-box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
@@ -54,6 +56,8 @@ html.light-theme {
   --sidebar-list-active-background-color: #d3dde3;
   --sidebar-list-background-color: #dedede;
   --sidebar-link-border-color: #000;
+  --sidebar-twisty-color: #{$lf-main-blue-color};
+  --sidebar-highlight-color: #{$lf-main-blue-color};
   --sidebar-item-border-color: #dfdfdf;
   --sidebar-active-button-background-color: #dfdfdf;
   --footer-arrow-color: $ts-dark-bg-for-foreground-color;

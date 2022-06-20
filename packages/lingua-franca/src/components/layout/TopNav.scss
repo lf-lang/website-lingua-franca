@@ -108,7 +108,7 @@
 
 form.search {
   height: 4rem;
-  background-color: $ts-main-blue-darker-color;
+  background-color: $lf-main-blue-color;
   border-radius: 3px 0px 0px 3px;
 
   padding-left: 1rem;
@@ -127,7 +127,7 @@ form.search {
   }
 
   &:focus-within {
-    background-color: $ts-main-blue-lighter-color;
+    background-color: $lf-main-blue-lighter-color;
     @media screen and (-ms-high-contrast: black-on-white) {
       border: 2px solid white;
     }
@@ -140,10 +140,10 @@ form.search {
     width: 150px;
 
     &:focus-within {
-      background-color: $ts-main-blue-lighter-color;
+      background-color: $lf-main-blue-lighter-color;
     }
     -webkit-appearance: none;
-    background-color: $ts-main-blue-darker-color;
+    background-color: $lf-main-blue-color;
 
     border-color: #152740;
     border-radius: 0;
@@ -190,7 +190,7 @@ form.search {
     button {
       flex: 1;
       flex-grow: 1;
-      background-color: $ts-main-blue-darker-color;
+      background-color: $lf-main-blue-color;
       color: white;
       border: none;
       border-radius: 0;

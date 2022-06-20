@@ -1,7 +1,7 @@
 @import "../../style/globals.scss";
 
 #site-footer {
-  background-color: $ts-main-blue-color;
+  background-color: $lf-main-blue-color;
   color: white;
   padding-top: 1rem;
   padding-bottom: 3rem;
@@ -103,7 +103,7 @@
       margin-right: 1rem;
 
       select {
-        background-color: $ts-main-blue-darkest-color;
+        background-color: $ts-dark-bg-color;
         color: white;
       }
     }

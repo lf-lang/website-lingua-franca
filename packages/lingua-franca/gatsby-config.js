@@ -42,7 +42,7 @@ module.exports = {
         short_name: `LF Docs`,
         start_url: `/`,
         background_color: `white`,
-        theme_color: `#3178C6`,
+        theme_color: `#3B7EA1`,
         display: `standalone`,
         icon: `static/icons/lf-logo.png`,
       },

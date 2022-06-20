@@ -1,21 +1,16 @@
 // The CSS Vars live in main.scss
 
 // Lingua Franca specific:
-// Too glaring: $lf-keyword-on-dark: rgb(247, 148, 30);
-$lf-keyword-on-dark: rgb(196, 130, 14);
-$lf-keyword-on-light: rgb(196, 130, 14);
-$lf-target-selector-on-light: rgb(247, 148, 30);
-$lf-target-selector-on-dark: rgb(196, 130, 14);
+// Too glaring: $lf-gold-dark: rgb(247, 148, 30);
+$lf-gold-light: rgb(247, 148, 30);
+$lf-gold-dark: rgb(196, 130, 14);
 
 // General:
-$ts-main-blue-color: #3178c6;
-$ts-main-blue-darker-color: #235a97;
-$ts-main-blue-lighter-color: #358ef1;
-$ts-main-blue-lightest-color: #719af4;
-$ts-main-blue-darkest-color: #00273f;
+$lf-main-blue-color: #003262;
+$lf-main-blue-lighter-color: #3B7EA1;
+$lf-main-blue-lightest-color: #a8baf3;  // FIXME: This color is chosen ad-hoc.
 
-$ts-barely-blue-highlight: #e3e8ec;
-$ts-dark-barely-blue-highlight: #28323a;
+$ts-dark-barely-blue-highlight: #2a2828;
 
 $ts-js-yellow-bright-color: #f1dd35;
 $ts-js-yellow-muted-color: #c6bf31;
@@ -25,8 +20,8 @@ $ts-light-bg-sandy-color-20: #faf9f820;
 $ts-light-bg-grey: #eeeeee;
 $ts-light-bg-grey-highlight-color: #f2f2f2;
 
-$ts-dark-bg-color: #262626;
-$ts-dark-bg-for-foreground-color: #313131;
+$ts-dark-bg-color: #181818;
+$ts-dark-bg-for-foreground-color: #202020;
 $ts-dark-bg-secondary: #2a2a2b;
 $ts-bg-selection-grey: #4e4e4f;
 

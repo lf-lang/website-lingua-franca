@@ -1,7 +1,7 @@
 @import "../../../style/globals.scss";
 @import "./grid.scss";
 
-$headline-background-bg: $ts-main-blue-color;
+$headline-background-bg: $lf-main-blue-color;
 $headline-foreground-bg: white;
 
 .version-bar {
@@ -14,7 +14,7 @@ $headline-foreground-bg: white;
   p {
     margin: 0;
     a {
-      color: $ts-main-blue-lightest-color;
+      color: $lf-main-blue-lightest-color;
     }
   }
 }
@@ -223,13 +223,8 @@ $headline-foreground-bg: white;
     }
   }
 
-  .darkblue {
-    background-color: $ts-main-blue-darkest-color;
-    color: white;
-  }
-
   .blue {
-    background-color: $ts-main-blue-color;
+    background-color: $lf-main-blue-color;
     color: white;
   }
 
@@ -554,7 +549,7 @@ $headline-foreground-bg: white;
 
     // One of these has to be set
     &.short {
-      background: $ts-main-blue-color;
+      background: $lf-main-blue-color;
       background-position-y: bottom -180px;
       height: 260px;
       border: 1px solid white;
@@ -589,7 +584,7 @@ $headline-foreground-bg: white;
       margin-bottom: 2px;
 
       &:hover {
-        border-color: $ts-main-blue-color;
+        border-color: $lf-main-blue-color;
         border-width: 2px;
         box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
         max-width: 246px;
@@ -761,13 +756,13 @@ $headline-foreground-bg: white;
   .beta {
     width: 28%;
     .bar {
-      background-color: $ts-main-blue-color;
+      background-color: $lf-main-blue-color;
     }
   }
   .rc {
     width: 17%;
     .bar {
-      background-color: $ts-main-blue-darker-color;
+      background-color: $lf-main-blue-color;
     }
   }
 
@@ -1128,7 +1123,7 @@ $headline-foreground-bg: white;
         width: 20%;
         left: 0;
         height: 13px;
-        background-color: $ts-main-blue-color;
+        background-color: $lf-main-blue-color;
       }
 
       &.yellow-lot-blue:after {
