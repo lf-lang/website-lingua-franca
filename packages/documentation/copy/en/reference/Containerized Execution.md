@@ -30,10 +30,10 @@ How to use this depends on whether your application is federated. You will need 
 
 ### Using docker build and docker run
 
-Suppose your LF source file is `Foo.lf`. When you run `lfc` or use the IDE to generate code, a file called `Foo.Dockerfile` will appear in the `src_gen` directory. You can use this file to build a Docker image as follows. First, make sure you are in the same directory as the source file. Then issue the command:
+Suppose your LF source file is `Foo.lf`. When you run `lfc` or use the IDE to generate code, a file called `Foo.Dockerfile` will appear in the `src_gen/Foo` directory, see [Structure of an LF project](/docs/handbook/a-first-reactor#structure-of-an-lf-project) for more info. You can use this Dockerfile to build a Docker image as follows. First, navigate into the directory where `Foo.Dockerfile` is located. Then issue the command:
 
 ```
-   docker build -t foo -f src-gen/Foo.Dockerfile .
+   docker build -t foo -f Foo.Dockerfile .
 ```
 
 This will create a Docker image with tag `foo`. The tag is required to be all lower-case letters. By convention, we advise using the LF source file name, converted to lower case.
