@@ -5,7 +5,7 @@
 }
 
 nav#sidebar {
-  min-width: 16rem;
+  min-width: 19rem;
   background-color: var(--sidebar-background-color);
   color: var(--alt-text-color);
 
@@ -166,6 +166,35 @@ nav#sidebar {
       max-height: calc(100vh - 10px);
       overflow-y: auto;
       overflow-x: hidden;
+    }
+  }
+
+  #targetSelector {
+    border-radius: 0;
+    border: none;
+    height: 1.5rem;
+    display: inline;
+    position: relative;
+    margin: 0.5rem;
+    color: #000;
+    .selected {
+      display: block;
+    }
+
+    & > div > div {
+      display: none;
+      background-color: #{$lf-gold-within-gold};
+      min-width: 7rem;
+      padding: 0.1rem 0.5rem;
+    }
+
+    &:hover > div > div {
+      display: block;
+    }
+    & > div {
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
     }
   }
 }

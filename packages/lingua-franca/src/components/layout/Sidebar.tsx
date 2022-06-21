@@ -127,14 +127,16 @@ export const Sidebar = (props: Props) => {
     return (
       <li key="targetChooser">
         <button id="targetChooser">
-          <label>Target language:</label>
-          <select name="target" id="targetSelector" onChange={(e) => setTargetLanguage(e.target.value)}>
-            <option value="lf-c">C</option>
-            <option value="lf-cpp">C++</option>
-            <option value="lf-py">Python</option>
-            <option value="lf-ts">TypeScript</option>
-            <option value="lf-rs">Rust</option>
-          </select>
+          <label>Target language:&nbsp;</label>
+          <div id="targetSelector">
+            <div>
+              <div className="selected">C</div>
+              <div>C++</div>
+              <div>Python</div>
+              <div>TypeScript</div>
+              <div>Rust</div>
+            </div>
+          </div>
         </button>
       </li>
     )
