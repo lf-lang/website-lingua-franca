@@ -178,23 +178,42 @@ nav#sidebar {
     margin: 0.5rem;
     color: #000;
     .selected {
-      display: block;
+      display: inline-flex;
+      flex-flow: row;
+      order: -1;
+    }
+    .unselected {
+      display: none;
+      order: 0;
     }
 
-    & > div > div {
-      display: none;
+    & > div > button {
+      display: inline-block;
+      height: auto;
       background-color: #{$lf-gold-within-gold};
       min-width: 7rem;
       padding: 0.1rem 0.5rem;
     }
 
-    &:hover > div > div {
-      display: block;
+    &.open button {
+      display: inline-flex;
     }
     & > div {
-      display: inline-block;
+      display: inline-flex;
+      flex-flow: column;
       position: absolute;
       z-index: 1;
+    }
+    & .twisty {
+      display: none;
+      margin-left: auto;
+    }
+    &.open .selected .open {
+      display: inline-block;
+    }
+    &.closed .selected .closed {
+      display: inline-block;
+      margin-right: -0.8rem;
     }
   }
 }

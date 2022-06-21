@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import "./Sidebar.scss"
 import { onAnchorKeyDown, onButtonKeydown } from "./Sidebar-keyboard"
 import { SidebarNavItem } from "../../lib/documentationNavigation"
-import { setTargetLanguage } from "../../lib/setTargetLanguage";
+import { getTargetLanguage, setTargetLanguage } from "../../lib/setTargetLanguage"
 
 export type Props = {
   navItems: SidebarNavItem[]
@@ -122,19 +122,45 @@ export const Sidebar = (props: Props) => {
     }
   }
 
+  const TargetLanguageLink = (props: {target: string, children: string}) => {
+    return <button
+      className={getTargetLanguage() === props.target ? "selected" : "unselected"}
+      id={props.target}
+      onClick={() => setTargetLanguage(props.target)}
+    >
+      {props.children}
+      <div className="twisty open">
+        <svg fill="none" height="9" viewBox="0 0 14 9" width="14" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1 1 6 6 6-6" stroke="#000" stroke-width="2"></path>
+        </svg>
+      </div>
+      <span className="twisty closed">
+        <svg fill="none" height="14" viewBox="0 0 9 14" width="9" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1 13 6-6-6-6" stroke="#000" stroke-width="2"></path>
+        </svg>
+      </span>
+    </button>
+  }
+
+  function toggleOpen() {
+    const selector = document.getElementById("targetSelector");
+    if (selector === null) return;
+    selector.className = selector.className === "open" ? "closed" : "open";
+  }
+
   /* Target language chooser */
   const RenderTargetChooser = () => {
     return (
       <li key="targetChooser">
         <button id="targetChooser">
           <label>Target language:&nbsp;</label>
-          <div id="targetSelector">
+          <div id="targetSelector" className="closed" onClick={toggleOpen}>
             <div>
-              <div className="selected">C</div>
-              <div>C++</div>
-              <div>Python</div>
-              <div>TypeScript</div>
-              <div>Rust</div>
+              <TargetLanguageLink target="lf-c">C</TargetLanguageLink>
+              <TargetLanguageLink target="lf-cpp">C++</TargetLanguageLink>
+              <TargetLanguageLink target="lf-py">Python</TargetLanguageLink>
+              <TargetLanguageLink target="lf-ts">TypeScript</TargetLanguageLink>
+              <TargetLanguageLink target="lf-rs">Rust</TargetLanguageLink>
             </div>
           </div>
         </button>
