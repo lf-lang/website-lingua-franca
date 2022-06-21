@@ -3,7 +3,9 @@
 
 .dark-theme {
   --lf-keyword: #{$lf-gold-dark};
-  --lf-target-selector: #{$lf-gold-dark};
+  --lf-target-selector: #{$lf-gold-dark-dark};
+  --lf-target-selector-button: #{$lf-gold-dark};
+  --lf-target-selector-button-shadow: #{$lf-gold-dark-dark-dark};
   --background-color: #{$ts-dark-bg-color};
   --text-color: #fff;
   --border-color: #444;
@@ -40,6 +42,8 @@ html.light-theme {
   // light theme
   --lf-keyword: #{$lf-gold-dark};
   --lf-target-selector: #{$lf-gold-light};
+  --lf-target-selector-button: #{$lf-gold-light-light};
+  --lf-target-selector-button-shadow: #{$lf-gold-dark};
   --background-color: #{$ts-light-bg-sandy-color};
   --pure-background: white;
   --text-color: #333;

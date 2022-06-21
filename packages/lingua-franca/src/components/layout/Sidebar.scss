@@ -152,7 +152,7 @@ nav#sidebar {
       &.highlight a {
         background-color: var(--background-color);
         color: var(--sidebar-highlight-color);
-        border-left: 2px solid $lf-main-blue-lightest-color;
+        border-left: 2px solid var(--sidebar-highlight-color);
         margin-left: 0.5rem;
         margin-right: -0.5rem;
         font-weight: 500;
@@ -190,9 +190,9 @@ nav#sidebar {
     & > div > button {
       display: inline-block;
       height: auto;
-      background-color: #{$lf-gold-within-gold};
-      min-width: 7rem;
+      min-width: 7.5rem;
       padding: 0.1rem 0.5rem;
+      background-color: var(--lf-target-selector-button);
     }
 
     &.open button {
@@ -203,6 +203,7 @@ nav#sidebar {
       flex-flow: column;
       position: absolute;
       z-index: 1;
+      box-shadow: -1px 1px 3px var(--lf-target-selector-button-shadow);
     }
     & .twisty {
       display: none;
@@ -213,7 +214,6 @@ nav#sidebar {
     }
     &.closed .selected .closed {
       display: inline-block;
-      margin-right: -0.8rem;
     }
   }
 }

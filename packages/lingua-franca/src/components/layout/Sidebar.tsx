@@ -134,11 +134,11 @@ export const Sidebar = (props: Props) => {
           <path d="m1 1 6 6 6-6" stroke="#000" stroke-width="2"></path>
         </svg>
       </div>
-      <span className="twisty closed">
+      <div className="twisty closed">
         <svg fill="none" height="14" viewBox="0 0 9 14" width="9" xmlns="http://www.w3.org/2000/svg">
           <path d="m1 13 6-6-6-6" stroke="#000" stroke-width="2"></path>
         </svg>
-      </span>
+      </div>
     </button>
   }
 
