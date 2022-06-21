@@ -41,7 +41,7 @@ const LinkSection = (props: Section) =>
     <Row className={"prev-next " + props.type}>
       <div className="arrow">
         <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10.5 0V14L0 7.5L10.5 0Z" fill="var(--sidebar-twisty-color)" />
+          <path d="M10.5 0V14L0 7.5L10.5 0Z" fill="var(--link-color)" />
         </svg>
       </div>
 

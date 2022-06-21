@@ -183,8 +183,12 @@ nav#sidebar {
       order: -1;
     }
     .unselected {
-      display: none;
+      display: inline-flex;
       order: 0;
+    }
+    &.closed .unselected {
+      height: 0;
+      padding: 0;
     }
 
     & > div > button {
@@ -193,6 +197,9 @@ nav#sidebar {
       min-width: 7.5rem;
       padding: 0.1rem 0.5rem;
       background-color: var(--lf-target-selector-button);
+      height: 1.5rem;
+      transition: height 20ms linear 0ms;
+      overflow: hidden;
     }
 
     &.open button {
