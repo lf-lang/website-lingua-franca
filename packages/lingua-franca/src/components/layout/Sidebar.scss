@@ -171,15 +171,22 @@ nav#sidebar {
     background-color: var(--lf-target-selector);
     & button {
       background-color: var(--lf-target-selector);
-      & div.current-target {
-        display: inline-block;
-      }
+    }
+    &.closed div.current-target {
+      display: inline-block;
+    }
+    &.open div.current-target {
+      display: none;
+    }
+    & li.highlight a {
+      border-color: var(--sidebar-target-selector-highlight-color);
+      color: var(--sidebar-target-selector-highlight-color);
     }
     & ul {
-      background-color: var(--lf-target-selector);
+      background-color: var(--lf-target-selector-button);
       & li {
         border-top: 1px solid;
-        border-color: #{$lf-gold-dark};
+        border-color: #{$lf-gold-dark-dark};
         border-bottom: none;
       }
     }

@@ -13,7 +13,7 @@ export const setTargetLanguage = (selected: string) => {
   for (const target of targetLanguages) {
     const id = 'lf-' + target;
     const element = document.getElementById(id);
-    if (element != null) element.className = id === selected ? "selected" : "unselected"
+    if (element != null) element.className = id === selected ? "highlight" : ""
   }
   for (var target of targetLanguages) {
     for (var element of Array.from(document.getElementsByClassName('language-lf-' + target) as HTMLCollectionOf<HTMLElement>)) {

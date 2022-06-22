@@ -11,4 +11,5 @@ export const setInitialTargetLanguage = () => {
   let selector = document.getElementById("targetSelector") as any;
   if (selector != null) selector.value = target;
   setTargetLanguage(target);
+  return target;
 }
