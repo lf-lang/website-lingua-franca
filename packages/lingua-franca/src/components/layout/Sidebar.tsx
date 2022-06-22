@@ -4,7 +4,9 @@ import { Link } from "gatsby"
 import "./Sidebar.scss"
 import { onAnchorKeyDown, onButtonKeydown } from "./Sidebar-keyboard"
 import { SidebarNavItem } from "../../lib/documentationNavigation"
+import { setInitialTargetLanguage } from "../../lib/setInitialTargetLanguage"
 import { getTargetLanguage, setTargetLanguage } from "../../lib/setTargetLanguage"
+import { globalHistory } from '@reach/router'
 
 export type Props = {
   navItems: SidebarNavItem[]
@@ -123,13 +125,19 @@ export const Sidebar = (props: Props) => {
   }
 
   const TargetLanguageLink = (props: {target: string, children: string}) => {
-    return <a
-      className={getTargetLanguage() === props.target ? "selected" : "unselected"}
-      id={props.target}
-      onClick={() => setTargetLanguage(props.target)}
-    >
+    return <li className={getTargetLanguage() === props.target ? "highlight" : ""} id={props.target}>
+      <a onClick={() => setTargetLanguage(props.target)}>
+        {props.children}
+      </a>
+    </li>
+  }
+
+  const CurrentTarget = (props: {target: string, children: string}) => {
+    const hidden: boolean = props.target === (getTargetLanguage() || setInitialTargetLanguage())
+    const style: React.CSSProperties = {display: hidden ? "" : "none" }
+    return <div className={`language-${props.target} current-target`} style = {style}>
       {props.children}
-    </a>
+    </div>
   }
 
   function toggleOpen() {
@@ -140,14 +148,20 @@ export const Sidebar = (props: Props) => {
 
   /* Target language chooser */
   const RenderTargetChooser = () => {
+    useEffect(() => {
+      return globalHistory.listen(({ action }) => {
+        if (action === "PUSH") setInitialTargetLanguage()
+      })
+    }, [setInitialTargetLanguage])
+
     return (
       <li id="targetChooser" className="closed" onClick={toggleOpen}>
         <button id="targetSelector">
-          <div className="language-lf-c current-target">C</div>
-          <div className="language-lf-cpp current-target">C++</div>
-          <div className="language-lf-py current-target">Python</div>
-          <div className="language-lf-rs current-target">Rust</div>
-          <div className="language-lf-ts current-target">TypeScript</div>
+        Target<CurrentTarget target="lf-c">&#58; C</CurrentTarget>
+          <CurrentTarget target="lf-cpp">&#58; C++</CurrentTarget>
+          <CurrentTarget target="lf-py">&#58; Python</CurrentTarget>
+          <CurrentTarget target="lf-rs">&#58; Rust</CurrentTarget>
+          <CurrentTarget target="lf-ts">&#58; TypeScript</CurrentTarget>
           <span className="open">
             <svg fill="none" height="9" viewBox="0 0 14 9" width="14" xmlns="http://www.w3.org/2000/svg">
               <path d="m1 1 6 6 6-6" stroke="#000" stroke-width="2"></path>
@@ -160,11 +174,11 @@ export const Sidebar = (props: Props) => {
           </span>
         </button>
         <ul>
-          <li><TargetLanguageLink target="lf-c">C</TargetLanguageLink></li>
-          <li><TargetLanguageLink target="lf-cpp">C++</TargetLanguageLink></li>
-          <li><TargetLanguageLink target="lf-py">Python</TargetLanguageLink></li>
-          <li><TargetLanguageLink target="lf-ts">TypeScript</TargetLanguageLink></li>
-          <li><TargetLanguageLink target="lf-rs">Rust</TargetLanguageLink></li>
+          <TargetLanguageLink target="lf-c">C</TargetLanguageLink>
+          <TargetLanguageLink target="lf-cpp">C++</TargetLanguageLink>
+          <TargetLanguageLink target="lf-py">Python</TargetLanguageLink>
+          <TargetLanguageLink target="lf-ts">TypeScript</TargetLanguageLink>
+          <TargetLanguageLink target="lf-rs">Rust</TargetLanguageLink>
         </ul>
       </li>
     )

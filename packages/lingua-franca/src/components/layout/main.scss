@@ -5,7 +5,6 @@
   --lf-keyword: #{$lf-gold-dark};
   --lf-target-selector: #{$lf-gold-dark-dark};
   --lf-target-selector-button: #{$lf-gold-dark};
-  --lf-target-selector-button-shadow: #{$lf-gold-dark-dark-dark};
   --background-color: #{$ts-dark-bg-color};
   --text-color: #fff;
   --border-color: #444;
@@ -25,6 +24,7 @@
   --sidebar-item-border-color: #3e3e3e;
   --sidebar-twisty-color: #248AED;
   --sidebar-highlight-color: #248AED;
+  --sidebar-target-selector-highlight-color: lf-gold-light-light;
   --sidebar-active-button-background-color: #{$ts-bg-selection-grey};
   --table-border-color: #545454;
   --blue-tinged-bg: #2c3841;
@@ -42,8 +42,7 @@ html.light-theme {
   // light theme
   --lf-keyword: #{$lf-gold-dark};
   --lf-target-selector: #{$lf-gold-light};
-  --lf-target-selector-button: #{$lf-gold-light-light};
-  --lf-target-selector-button-shadow: #{$lf-gold-dark};
+  --lf-target-selector-button: rgb(255, 240, 222);
   --background-color: #{$ts-light-bg-sandy-color};
   --pure-background: white;
   --text-color: #333;
@@ -62,6 +61,7 @@ html.light-theme {
   --sidebar-link-border-color: #000;
   --sidebar-twisty-color: #{$lf-main-blue-color};
   --sidebar-highlight-color: #0D5CA8;
+  --sidebar-target-selector-highlight-color: #{$lf-gold-dark-dark};
   --sidebar-item-border-color: #dfdfdf;
   --sidebar-active-button-background-color: #dfdfdf;
   --footer-arrow-color: $ts-dark-bg-for-foreground-color;
