@@ -146,7 +146,7 @@ nav#sidebar {
 
       a:focus,
       a:hover {
-        border-left: 2px solid var(--sidebar-link-border-color);
+        border-left: 3px solid var(--sidebar-link-border-color);
       }
 
       &.highlight a {
@@ -167,59 +167,21 @@ nav#sidebar {
       overflow-x: hidden;
     }
   }
-
-  #targetSelector {
-    border-radius: 0;
-    border: none;
-    height: 1.5rem;
-    display: inline;
-    position: relative;
-    margin: 0.5rem;
-    color: #000;
-    .selected {
-      display: inline-flex;
-      flex-flow: row;
-      order: -1;
+  #targetChooser {
+    background-color: var(--lf-target-selector);
+    & button {
+      background-color: var(--lf-target-selector);
+      & div.current-target {
+        display: inline-block;
+      }
     }
-    .unselected {
-      display: inline-flex;
-      order: 0;
-    }
-    &.closed .unselected {
-      height: 0;
-      padding: 0;
-    }
-
-    & > div > button {
-      display: inline-block;
-      height: auto;
-      min-width: 7.5rem;
-      padding: 0.1rem 0.5rem;
-      background-color: var(--lf-target-selector-button);
-      height: 1.5rem;
-      transition: height 20ms linear 0ms;
-      overflow: hidden;
-    }
-
-    &.open button {
-      display: inline-flex;
-    }
-    & > div {
-      display: inline-flex;
-      flex-flow: column;
-      position: absolute;
-      z-index: 1;
-      box-shadow: -1px 1px 3px var(--lf-target-selector-button-shadow);
-    }
-    & .twisty {
-      display: none;
-      margin-left: auto;
-    }
-    &.open .selected .open {
-      display: inline-block;
-    }
-    &.closed .selected .closed {
-      display: inline-block;
+    & ul {
+      background-color: var(--lf-target-selector);
+      & li {
+        border-top: 1px solid;
+        border-color: #{$lf-gold-dark};
+        border-bottom: none;
+      }
     }
   }
 }

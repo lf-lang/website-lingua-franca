@@ -18,14 +18,14 @@ export const setTargetLanguage = (selected: string) => {
   for (var target of targetLanguages) {
     for (var element of Array.from(document.getElementsByClassName('language-lf-' + target) as HTMLCollectionOf<HTMLElement>)) {
       if (element.classList.contains('language-' + selected)) {
-        element.style.display = "block";
+        element.style.display = "";
       } else {
         element.style.display = "none";
       }
     }
     for (var element of Array.from(document.getElementsByClassName('lf-' + target) as HTMLCollectionOf<HTMLElement>)) {
       if (element.classList.contains(selected)) {
-        element.style.display = "inline";
+        element.style.display = "";
       } else {
         element.style.display = "none";
       }
