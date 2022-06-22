@@ -42,7 +42,7 @@ html.light-theme {
   // light theme
   --lf-keyword: #{$lf-gold-dark};
   --lf-target-selector: #{$lf-gold-light};
-  --lf-target-selector-button: rgb(255, 240, 222);
+  --lf-target-selector-button: rgb(230, 221, 174);
   --background-color: #{$ts-light-bg-sandy-color};
   --pure-background: white;
   --text-color: #333;
@@ -61,7 +61,7 @@ html.light-theme {
   --sidebar-link-border-color: #000;
   --sidebar-twisty-color: #{$lf-main-blue-color};
   --sidebar-highlight-color: #0D5CA8;
-  --sidebar-target-selector-highlight-color: #{$lf-gold-dark-dark};
+  --sidebar-target-selector-highlight-color: #{$lf-gold-dark};
   --sidebar-item-border-color: #dfdfdf;
   --sidebar-active-button-background-color: #dfdfdf;
   --footer-arrow-color: $ts-dark-bg-for-foreground-color;
