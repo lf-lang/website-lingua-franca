@@ -3,11 +3,12 @@
   "private": true,
   "license": "MIT",
   "version": "1.0.0",
+  "type": "commonjs",
   "scripts": {
     "build": "echo 'NOOP'",
     "test": "echo 'NOOP'",
-    "create-handbook-nav": "node ./scripts/generateTypesForFilesInDocs && node ./scripts/generateDocsNavigationPerLanguage.js",
-    "bootstrap": "yarn create-handbook-nav && node ./scripts/generateAttribution.js"
+    "create-handbook-nav": "node ./scripts/generateTypesForFilesInDocs && node ./scripts/generateDocsNavigationPerLanguage",
+    "bootstrap": "yarn create-handbook-nav && node ./scripts/generateAttribution"
   },
   "prettier": {
     "semi": true

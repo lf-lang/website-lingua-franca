@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 import * as vsctm from "vscode-textmate"
-import { Config } from "./config"
+import { Config } from "./config.js"
 import * as oniguruma from "vscode-oniguruma"
 
 /**

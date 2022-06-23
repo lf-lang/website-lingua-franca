@@ -70,6 +70,9 @@ typings/
 # tdsx
 dist
 
+# transpiled TS
+src-gen
+
 .lighthouserc.json
 packages/documentation/output/attribution.json
 

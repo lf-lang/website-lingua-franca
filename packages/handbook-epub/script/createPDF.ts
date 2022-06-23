@@ -1,17 +1,17 @@
 #!/usr/bin/env ts-node
 
-import { join } from "path";
 import { writeFileSync, copyFileSync } from "fs";
 import {
   generateV2Markdowns,
   getGitSHA,
   getHTML,
   replaceAllInString,
-} from "./setupPages";
-import { getDocumentationNavForLanguage } from "../../lingua-franca/src/lib/documentationNavigation";
-const { chromium } = require("playwright");
-const sass = require("sass");
-import { language } from "gray-matter";
+} from "./setupPages.js";
+import { getDocumentationNavForLanguage } from "../../lingua-franca/src/lib/documentationNavigation.js";
+import { chromium } from "playwright";
+import sass from "sass";
+import { join } from "path";
+import { htmlOutputPath, pdfOutputPath, scssFiles, websitePdfOutputPath } from "./config.js";
 
 const markdowns = generateV2Markdowns();
 
@@ -35,21 +35,9 @@ const bookMetadata = {
 
 const generateCSS = (lang: string) => {
   console.log(`Generating CSS from SCSS files for ${lang}`);
-  
-
-  const scssFiles = [
-    "../../lingua-franca/src/components/layout/main.scss",
-    "../../lingua-franca/src/templates/documentation.scss",
-    "../../lingua-franca/src/templates/markdown.scss",
-  ];
 
   const css = scssFiles
-    .map((path) => {
-      const scss = sass.renderSync({
-        file: join(__dirname, path),
-      });
-      return scss.css.toString();
-    })
+    .map(path => sass.compile(path).css.toString())
     .join("\n\n");
 
   var langCSS = `
@@ -175,7 +163,7 @@ const generateHTML = async (lang: string) => {
     html += await addHandbookPage(item.permalink!, i);
   }
 
-  writeFileSync(join(__dirname, "..", "assets", `all_lf-${lang}.html`), html);
+  writeFileSync(join(htmlOutputPath, `all_lf-${lang}.html`), html);
 };
 
 const generatePDF = async (lang: string) => {
@@ -183,12 +171,12 @@ const generatePDF = async (lang: string) => {
   const browser = await chromium.launch(); // Or 'firefox' or 'webkit'.
   const page = await browser.newPage();
   console.log(`Loading the html for ${lang}`);
-  await page.goto("file://" + join(__dirname, "..", "assets", `all_lf-${lang}.html`));
+  await page.goto("file://" + join(htmlOutputPath, `all_lf-${lang}.html`));
 
   console.log(`Rendering the PDF for ${lang}`);
   await page.emulateMedia({ media: "screen" });
   await page.pdf({
-    path: join(__dirname, "..", "dist", `handbook_lf-${lang}.pdf`),
+    path: join(pdfOutputPath, `handbook_lf-${lang}.pdf`),
     margin: { top: 40, bottom: 60 },
   });
 
@@ -230,9 +218,9 @@ const go = async () => {
     await generateHTML(lang);
     await generatePDF(lang);
     copyFileSync(
-      join(__dirname, "..", "dist", `handbook_lf-${lang}.pdf`),
+      join(pdfOutputPath, `handbook_lf-${lang}.pdf`),
       // prettier-ignore
-      join( __dirname, "..", "..", "lingua-franca", "static", "assets", `lingua-franca-handbook_lf-${lang}.pdf`)
+      join(websitePdfOutputPath, `lingua-franca-handbook_lf-${lang}.pdf`)
     );
   });
 };

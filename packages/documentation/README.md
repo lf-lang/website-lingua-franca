@@ -77,7 +77,7 @@ Note that these `<div>` lines, for some inexplicable reason, need to be surround
 
 ## Inserting Target-Specific Documentation from Source Files
 
-If you insert the following line into a source markdown file:
+If you insert the following line into a source Markdown file:
 
 ```
 $insert(Name)$
@@ -113,4 +113,4 @@ packages/documentation/code/T/src
 
 where `T` is one of `c`, `cpp`, etc.
 
-If you re-run the same script on the same markdown file, it will update the code blocks with the latest version in the above directory. The code will be expected to be in `Name.lf` file. If no macthin code is found, then an error message will be inserted instead into the markdown file.
+If you re-run the same script on the same Markdown file, it will update the code blocks with the latest version in the above directory. The code will be expected to be in `Name.lf` file. If no matching code is found, then an error message will be inserted instead into the Markdown file.

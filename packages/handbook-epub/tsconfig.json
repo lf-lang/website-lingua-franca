@@ -1,6 +1,14 @@
 {
     "compilerOptions": {
         "noImplicitAny": false,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "outDir": "src-gen",
+        "esModuleInterop": true,
+        "allowJs": true
     },
     "include": ["script/**/*"],
-  }
+}

@@ -12262,9 +12262,10 @@ __metadata:
   dependencies:
     "@orta/streampub": 1.9.0
     fs-jetpack: ^2.4.0
+    lf-syntax-highlighting: "file:../lingua-franca/plugins/lf-syntax-highlighting"
     playwright: ^1.17.*
     sass: "*"
-    ts-node: "*"
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -14965,6 +14966,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lf-syntax-highlighting@file:../lingua-franca/plugins/lf-syntax-highlighting::locator=handbook-epub%40workspace%3Apackages%2Fhandbook-epub":
+  version: 1.0.0
+  resolution: "lf-syntax-highlighting@file:../lingua-franca/plugins/lf-syntax-highlighting#../lingua-franca/plugins/lf-syntax-highlighting::hash=f09515&locator=handbook-epub%40workspace%3Apackages%2Fhandbook-epub"
+  dependencies:
+    vscode-textmate: ^6.0.0
+  checksum: 2e3aa52c90ee5254db92d5c2631aa2647115f855c8e93e64f89884ef139e84127cf2ce15c2c38a12abb09dd802839ea77f790ebfca0cf739ead0eec3bb4e1b0a
+  languageName: node
+  linkType: hard
+
+"lf-syntax-highlighting@file:plugins/lf-syntax-highlighting::locator=lingua-franca%40workspace%3Apackages%2Flingua-franca":
+  version: 1.0.0
+  resolution: "lf-syntax-highlighting@file:plugins/lf-syntax-highlighting#plugins/lf-syntax-highlighting::hash=f09515&locator=lingua-franca%40workspace%3Apackages%2Flingua-franca"
+  dependencies:
+    vscode-textmate: ^6.0.0
+  checksum: 2e3aa52c90ee5254db92d5c2631aa2647115f855c8e93e64f89884ef139e84127cf2ce15c2c38a12abb09dd802839ea77f790ebfca0cf739ead0eec3bb4e1b0a
+  languageName: node
+  linkType: hard
+
 "li@npm:^1.3.0":
   version: 1.3.0
   resolution: "li@npm:1.3.0"
@@ -15025,6 +15044,7 @@ __metadata:
     gh-pages: ^3.2.3
     jest: "*"
     jsdom: ^19.0.0
+    lf-syntax-highlighting: "file:plugins/lf-syntax-highlighting"
     preact: ^10.6.5
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -15034,7 +15054,7 @@ __metadata:
     ts-debounce: ^4.0.0
     ts-jest: ^27.1.3
     ts-node: ^10.4.0
-    typescript: "*"
+    typescript: ^4.6.4
     xml-js: ^1.6.11
   languageName: unknown
   linkType: soft
@@ -21741,7 +21761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:*, ts-node@npm:^10.4.0":
+"ts-node@npm:^10.4.0":
   version: 10.7.0
   resolution: "ts-node@npm:10.7.0"
   dependencies:
@@ -21953,23 +21973,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.5.0-beta":
-  version: 4.5.0-beta
-  resolution: "typescript@npm:4.5.0-beta"
+"typescript@npm:^4.6.4":
+  version: 4.6.4
+  resolution: "typescript@npm:4.6.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5d46c5d8eed36f1c067397907eacd748c41013e69dc50fc059f2d9d94d7f75b16bef760e965054d8f99e0c0f13235c3aaf8002f9ce775f98da7498078937c48d
+  checksum: e7bfcc39cd4571a63a54e5ea21f16b8445268b9900bf55aee0e02ad981be576acc140eba24f1af5e3c1457767c96cea6d12861768fb386cf3ffb34013718631a
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A4.5.0-beta#~builtin<compat/typescript>":
-  version: 4.5.0-beta
-  resolution: "typescript@patch:typescript@npm%3A4.5.0-beta#~builtin<compat/typescript>::version=4.5.0-beta&hash=493e53"
+"typescript@patch:typescript@npm%3A^4.6.4#~builtin<compat/typescript>":
+  version: 4.6.4
+  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5502be3a852abeaafb085b7a31cda07957554291eb73f86ed85d2f033670c86d3603ccea197a83d2609f71cc22b206b9027317cd3c8f20eee233fb4a5c25a7e9
+  checksum: 8cff08bf66d9ecfbf9fcc5edde04a5a7923e6cac3b21d99b4e9a06973bf5bd7f9a83ec7eed24129c1b9e13fd861de8c1070110d4b9ce9f18ab57c6999e9c9a6f
   languageName: node
   linkType: hard
 
@@ -22562,6 +22582,13 @@ __metadata:
   version: 1.0.4
   resolution: "vscode-languageserver-textdocument@npm:1.0.4"
   checksum: d0b63abb9d22c1177c26df15807b028129fb966f0dfd01c9ae1d114f1c2a1262d8588bea3e6f6f2e400ada3836da844553d8bc21c64122242a212502ccf5f702
+  languageName: node
+  linkType: hard
+
+"vscode-textmate@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "vscode-textmate@npm:6.0.0"
+  checksum: ff6f17a406c2906586afc14ef01cb122e33acd35312e815abb5c924347a777c6783ce3fe7db8b83f1760ebf843c669843b9390f905b69c433b3395af28e4b483
   languageName: node
   linkType: hard
 

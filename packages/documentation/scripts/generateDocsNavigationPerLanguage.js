@@ -3,7 +3,7 @@
 const { readdirSync, statSync, existsSync, readFileSync, writeFileSync } = require("fs");
 const { join } = require("path");
 const { format } = require("prettier");
-const { enRoot, getFilePaths } = require("./generateTypesForFilesInDocs");
+const { enRoot, getFilePaths } = require("./generateTypesForFilesInDocs.js");
 const { read: readMarkdownFile } = require("gray-matter");
 
 // This file is the definitive sidebar navigation source. It takes either:

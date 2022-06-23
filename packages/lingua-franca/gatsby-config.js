@@ -11,7 +11,7 @@ if (process.env.BOOTSTRAPPING) {
   Bootstrapped. You can now run the site with ${chalk.greenBright.bold("yarn start")}.`)
   process.exit(0)
 }
-var lf = require("../documentation/scripts/linguaFrancaUtils");
+var lf = require("../documentation/scripts/linguaFrancaUtils.js");
 
 // require("./scripts/ensureDepsAreBuilt")
 

@@ -2,7 +2,8 @@
   "name": "lf-syntax-highlighting",
   "version": "1.0.0",
   "description": "A Gatsby plugin for highlighting Lingua Franca syntax.",
-  "main": "./src/index.cjs",
+  "main": "./dist/index.cjs",
+  "type": "commonjs",
   "scripts": {
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "fs": "^0.0.1-security",
+    "@types/node": "^17.0.31",
     "path": "^0.12.7",
-    "vscode-oniguruma": "^1.6.2",
-    "typescript": "*"
+    "typescript": "^4.6.4",
+    "vscode-oniguruma": "^1.6.2"
   },
   "dependencies": {
     "vscode-textmate": "^6.0.0"

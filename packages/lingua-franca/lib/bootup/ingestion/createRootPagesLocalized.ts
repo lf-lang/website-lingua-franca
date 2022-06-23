@@ -3,7 +3,7 @@ import fs from "fs"
 const { green } = require("chalk")
 
 import { NodePluginArgs, CreatePagesArgs } from "gatsby"
-import { recursiveReadDirSync } from "../../utils/recursiveReadDirSync"
+import { recursiveReadDirSync } from "../../utils/recursiveReadDirSync.cjs"
 import { isMultiLingual } from "./languageFilter"
 import { addPathToSite } from "../pathsOnSiteTracker"
 

@@ -3,9 +3,10 @@
   "private": true,
   "license": "MIT",
   "version": "1.0.0",
+  "type": "commonjs",
   "scripts": {
     "bootstrap": "echo 'NOOP'",
-    "build": "ts-node script/createEpub.ts && ts-node script/createPDF.ts",
+    "build": "tsc && node src-gen/handbook-epub/script/createEpub.js && node src-gen/handbook-epub/script/createPDF.js --experimental-modules",
     "test": "echo 'NOOP'"
   },
   "prettier": {
@@ -14,8 +15,11 @@
   "dependencies": {
     "@orta/streampub": "1.9.0",
     "fs-jetpack": "^2.4.0",
+    "lf-syntax-highlighting": "file:../lingua-franca/plugins/lf-syntax-highlighting",
     "playwright": "^1.17.*",
-    "sass": "*",
-    "ts-node": "*"
+    "sass": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
   }
 }
