@@ -27,10 +27,11 @@ const Index: React.FC<Props> = (props) => {
     </div>
     <div className="raised main-content-block">
     <h2 id="vscode">Visual Studio Code</h2>
-      <p>The easiest way to get started with Lingua Franca is to install our Visual Studio Code extension from the 
-        <a href="https://marketplace.visualstudio.com/items?itemName=lf-lang.vscode-lingua-franca">Visual Studio Marketplace</a>
-        or <a href="https://open-vsx.org/extension/lf-lang/vscode-lingua-franca">VSX Registry</a>.
-        To install this extension from the marketplace, launch VS Code Quick Open (<kbd>Ctrl</kbd> + <kbd>P</kbd>) and enter `ext install lf-lang.vscode-lingua-franca`.
+      <p>The easiest way to get started with Lingua Franca is to install our Visual Studio Code extension from the <
+        a href="https://marketplace.visualstudio.com/items?itemName=lf-lang.vscode-lingua-franca">Visual Studio Marketplace</a
+        > or <a href="https://open-vsx.org/extension/lf-lang/vscode-lingua-franca">VSX Registry</a>.
+        To install this extension from the marketplace, launch VS Code Quick Open (<kbd>Ctrl</kbd> + <kbd>P</kbd>) and
+        enter <code>ext install lf-lang.vscode-lingua-franca</code>.
         See <a href="/docs/handbook/code-extension">more details</a>.
       </p>
     </div>

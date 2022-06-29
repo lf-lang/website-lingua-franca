@@ -43,6 +43,8 @@ If you see a pop-up saying "Maven build scripts found" after opening the reposit
 
 ![](../../../../../img/intellij/skip_maven_build.png)
 
+To reduce the time spent indexing the repository upon startup, exclude any large directories that do not contain files that are relevant to you. For example, you should exclude any `node_modules` directories.
+
 ## Importing Gradle Project
 
 The next step is to load the Gradle configs for building and running Lingua Franca tasks in IntelliJ.

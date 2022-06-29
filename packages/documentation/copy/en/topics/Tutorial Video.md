@@ -11,7 +11,6 @@ A [video playlist](https://youtube.com/playlist?list=PL4zzL7roKtfXyKE3k8lOwPub9Y
 
 **Useful links:**
 
-- This page: [[https://esweek.lf-lang.org/]]
 - [Complete video playlist](https://youtube.com/playlist?list=PL4zzL7roKtfXyKE3k8lOwPub9YEjulS4o)
 - [Part I: Introduction](#introduction)
 - [Part II: Hello World](#hello)
@@ -44,9 +43,9 @@ This part briefly describes the background of the project and explains how to ge
   | [Native releases (Epoch IDE and lfc)](https://www.youtube.com/watch?v=7vkhX5tS_oI&list=PL4zzL7roKtfXyKE3k8lOwPub9YEjulS4o&index=1&t=1063s)   |
   | [Virtual Machine with LF pre-installed](https://www.youtube.com/watch?v=7vkhX5tS_oI&list=PL4zzL7roKtfXyKE3k8lOwPub9YEjulS4o&index=1&t=1311s) |
 
-- Virtual machine image: [[https://vm.lf-lang.org/]]: download the `Ubuntu-for-LF.ova` image and import into your favorite virtualization software (e.g., VirtualBox or VMWare Player). Start the VM and run Epoch IDE by clicking on the icon on the left.
-- Epoch IDE and lfc command-line compiler: [[https://releases.lf-lang.org/]]. Add `lfc` (and `epoch`) to your `$PATH` environment variable.
-- Requirements for each target language: [[https://reqs.lf-lang.org/]] (we use the C target here).
+- [Virtual machine image](https://vm.lf-lang.org/): download the `Ubuntu-for-LF.ova` image and import into your favorite virtualization software (e.g., VirtualBox or VMWare Player). Start the VM and run Epoch IDE by clicking on the icon on the left.
+- [Epoch IDE and lfc command-line compiler](https://releases.lf-lang.org/): Add `lfc` (and `epoch`) to your `$PATH` environment variable.
+- [Requirements for each target language](https://reqs.lf-lang.org/): We use the C target in this tutorial.
 
 <a name="hello"></a>
 

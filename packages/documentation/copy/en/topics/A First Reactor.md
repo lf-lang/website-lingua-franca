@@ -200,7 +200,4 @@ Lingua Franca files can have C/C++/Java-style comments and/or Python-style comme
      * Multi-line C-style comment.
      */
     # Single-line Python-style comment.
-    '''
-       Multi-line Python-style comment.
-    '''
 ```
