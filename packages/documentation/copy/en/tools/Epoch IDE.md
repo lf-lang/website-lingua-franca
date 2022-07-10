@@ -12,17 +12,17 @@ This page shows how to install and run the Epoch integrated development environm
 
 Download the appropriate `epoch_ide_...` file for your platform from:
 
-- [Version 0.2.0](https://github.com/lf-lang/lingua-franca/releases/tag/v0.2.0) (the most recent release)
+- [Version 0.2.1](https://github.com/lf-lang/lingua-franca/releases/tag/v0.2.1) (the most recent release)
 - [Nightly build](https://github.com/lf-lang/lingua-franca/releases/tag/nightly) (the latest prerelease, unstable)
 
 ## Set Up Epoch in MacOS
 
-The downloaded file is a compressed tarball. Open it to get an `Epoch.app` item that you can drag into your `Applications` folder.
+The downloaded file is a compressed tarball. Open it to get an `epoch.app` item that you can drag into your `Applications` folder.
 
 **First**: Currently, the Epoch IDE is not signed, and macOS will report it as "damaged" if you try to invoke it immediately. You can work around this by opening a terminal and running the following command:
 
 ```sh
-xattr -cr Epoch.app
+xattr -cr epoch.app
 ```
 
 **Second**: By default, the Lingua Franca compiler uses `cmake` to compile the programs it generates. This is not installed by default on macOS systems. To install `cmake` using `brew`, just do this:
@@ -36,7 +36,7 @@ Verify that cmake is in your path by typing `which cmake`.
 **Third**: We recommend also starting Epoch from the command line because then it will inherit your `PATH` variable (If you start it by double clicking on the icon, as usual in macOS, it will not find `cmake` and will be unable to build LF programs). To do this, in a terminal window:
 
 ```sh
-open -a Epoch
+open epoch.app
 ```
 
 If you instead start Epoch by double clicking on its icon, then when you compile Lingua Franca programs, you may get unexpected results or unexpected failures because Epoch fails to find required programs (e.g., your python runtime system or a compiler) or finds a different version from what `lfc` will find.
@@ -45,16 +45,16 @@ If you instead start Epoch by double clicking on its icon, then when you compile
 
 ## Set Up Epoch in Linux
 
-**First**: Uncompress the download (shown assuming the 0.2.0 version):
+**First**: Uncompress the download (shown assuming the 0.2.1 version):
 
 ```sh
-tar xvf epoch_ide_0.2.0-linux.gtk.x86_64.tar.gz
+tar xvf epoch_ide_0.2.1-linux.gtk.x86_64.tar.gz
 ```
 
 **Second**: Find and execute the IDE:
 
 ```sh
-cd epoch_ide_0.2.0-linux.gtk.x86_64
+cd epoch_ide_0.2.1-linux.gtk.x86_64
 ./epoch
 ```
 
@@ -65,7 +65,7 @@ You can move this executable to a more convenient place, ideally somewhere in yo
 **First**: In a terminal,
 
 ```powershell
-unzip epoch_ide_0.2.0-win32.win32.x86_64.zip
-cd epoch_ide_0.2.0-win32.win32.x86_64
+unzip epoch_ide_0.2.1-win32.win32.x86_64.zip
+cd epoch_ide_0.2.1-win32.win32.x86_64
 .\epoch
 ```
