@@ -93,6 +93,7 @@ const handbookPages = [
       { file: "developer/Downloading and Building.md" },
       { file: "developer/Developer Eclipse Setup with Oomph.md" },
       { file: "developer/Developer IntelliJ Setup (for Kotlin).md" },
+      { file: "developer/ROS Migration Guide.md" },
       { file: "developer/Running Benchmarks.md" },
     ]
   },

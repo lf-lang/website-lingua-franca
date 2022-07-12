@@ -263,6 +263,12 @@ export function getDocumentationNavForLanguage(
           oneline: "Developer IntelliJ Setup (for Kotlin).",
         },
         {
+          title: "ROS Migration Guide",
+          id: "4-ros-migration-guide",
+          permalink: "/docs/handbook/ros-migration-guide",
+          oneline: "ROS Migration Guide.",
+        },
+        {
           title: "Running Benchmarks",
           id: "4-running-benchmarks",
           permalink: "/docs/handbook/running-benchmarks",
